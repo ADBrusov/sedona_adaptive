@@ -1,8 +1,15 @@
-/* Стили блоков страницы index.html */
+@import "normalize.scss";
+@import "global.scss";
 @import "blocks/page-header.scss";
-@import "blocks/main-nav.scss";
+@import "blocks/nav.scss";
 @import "blocks/site-list.scss";
 @import "blocks/page-main.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/contacts.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
+
+/* Стили блоков страницы index.html */
 @import "blocks/intro.scss";
 @import "blocks/advantages.scss";
 @import "blocks/advantage.scss";
@@ -10,10 +17,6 @@
 @import "blocks/search.scss";
 @import "blocks/button.scss";
 @import "blocks/map.scss";
-@import "blocks/page-footer.scss";
-@import "blocks/contacts.scss";
-@import "blocks/social.scss";
-@import "blocks/copyright.scss";
 
 /* Стили блоков страницы photo.html */
 @import "blocks/add-intro.scss";

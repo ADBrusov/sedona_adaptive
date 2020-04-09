@@ -1,1 +1,34 @@
-//
+.features {
+  padding-top: 41px;
+  padding-bottom: 42px;
+
+  color: #333333;
+
+  background-color: #ffffff;
+}
+
+.features__list {
+  width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.features__item:not(:last-child) {
+  margin-bottom: 38px;
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 27px;
+
+  color: #000000;
+}
+
+.features__description {
+  margin: 0;
+
+  line-height: 21px;
+}
