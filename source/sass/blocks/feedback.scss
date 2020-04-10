@@ -1,1 +1,77 @@
-//
+.feedback__form {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
+  color: #000000;
+  text-transform: none;
+}
+
+.feedback__section {
+  width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.feedback__title {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.introduction__section label,
+.contact__section label {
+  font-weight: normal;
+  font-size: 14px;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.feedback__section input {
+  font-weight: bold;
+  color: #000000;
+}
+
+.feedback__section input::placeholder {
+  font-weight: bold;
+  color: #000000;
+}
+
+.review__section textarea {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  font-weight: bold;
+  color: #000000;
+}
+
+.review__section textarea::placeholder {
+  font-weight: bold;
+  color: #000000;
+}
+
+.feedback__submit {
+  margin-top: 51px;
+  margin-right: auto;
+  margin-bottom: 47px;
+  margin-left: auto;
+  padding-top: 21px;
+  padding-right: 48px;
+  padding-bottom: 21px;
+  padding-left: 47px;
+
+  text-transform: uppercase;
+
+  border: none;
+}
