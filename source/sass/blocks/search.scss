@@ -1,1 +1,40 @@
-//
+.search {
+  padding-top: 33px;
+  padding-bottom: 49px;
+}
+
+.search__intro {
+  width: 261px;
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.search__title {
+  margin-top: 0;
+  margin-bottom: 32px;
+
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.search__text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.search__button {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 17px;
+  padding-right: 47px;
+  padding-bottom: 18px;
+  padding-left: 47px;
+}
