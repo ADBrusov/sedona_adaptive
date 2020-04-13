@@ -44,3 +44,15 @@
   text-align: left;
   color: #000000;
 }
+
+@media (min-width: $tablet-width) {
+  .photo {
+    padding: 0;
+
+    border: none;
+  }
+
+  .photo:last-child {
+    border: none;
+  }
+}

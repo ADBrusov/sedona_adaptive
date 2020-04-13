@@ -1,10 +1,40 @@
 .photos {
-  width: 320px;
   margin-top: 0;
-  margin-right: auto;
   margin-bottom: 0;
-  margin-left: auto;
-  padding-left: 0;
 
   list-style: none;
+
+  background-color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .photos__item {
+    width: 324px;
+  }
+
+  .photos__item:first-child {
+    width: 648px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photos {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .photos__item {
+    width: 400px;
+  }
+
+  .photos__item:first-child {
+    width: 1200px;
+  }
 }
