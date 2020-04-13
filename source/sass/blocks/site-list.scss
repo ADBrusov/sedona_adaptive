@@ -26,3 +26,45 @@
   text-align: center;
   color: #ffffff;
 }
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 14px;
+    color: #000000;
+
+    background-color: #ffffff;
+  }
+
+  .site-list__item {
+    width: 153px;
+  }
+
+  .site-list__item:not(:last-child) {
+    border-bottom: none;
+  }
+
+  .site-list__item:not(:first-child) {
+    box-shadow: none;
+  }
+
+  .site-list__item:nth-child(4n-2) {
+    margin-right: 156px;
+  }
+
+  .site-list__item a {
+    color: #000000;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list__item {
+    width: 239px;
+  }
+
+  .site-list__item:nth-child(4n-2) {
+    margin-right: 244px;
+  }
+}
