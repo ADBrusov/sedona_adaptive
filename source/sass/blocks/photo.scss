@@ -7,7 +7,7 @@
   border-top: 1px solid #e5e5e5;
 }
 
-.photo:last-child {
+.photos__item:last-child .photo {
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -52,7 +52,32 @@
     border: none;
   }
 
-  .photo:last-child {
+  .photos__item:last-child .photo {
     border: none;
+  }
+
+  .photo__info {
+    background-color: #f2f2f2;
+  }
+
+  .photo__image {
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo__info {
+    background-color: #000000;
+    opacity: 0.3;
+    margin-top: -80px;
+    color: #ffffff;
+  }
+
+  .photo__title {
+    color: #ffffff;
+  }
+
+  .photo__likes-number {
+    color: #ffffff;
   }
 }
