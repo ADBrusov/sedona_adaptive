@@ -1,7 +1,6 @@
 .page-header {
-  min-width: 320px;
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
 
   background-color: #ffffff;
 }
@@ -9,7 +8,7 @@
 .page-header__logo-wrap {
   position: relative;
 
-  min-height: 56px;
+  height: 56px;
 }
 
 .page-header__logo {
@@ -18,4 +17,14 @@
   left: 50%;
 
   margin-left: -51px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo-wrap {
+    height: 0;
+  }
+
+  .nav {
+    order: 2;
+  }
 }

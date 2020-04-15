@@ -1,6 +1,21 @@
 .map__wrap {
-  width: 320px;
-  margin-right: auto;
-  margin-left: auto;
   padding-bottom: 10px;
+
+  background-color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .map__wrap {
+    padding-bottom: 0;
+  }
+
+  .map__wrap iframe {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map__wrap iframe {
+    width: 1200px;
+  }
 }

@@ -8,9 +8,6 @@
 }
 
 .features__list {
-  width: 320px;
-  margin-right: auto;
-  margin-left: auto;
   padding-left: 0;
 
   list-style: none;
@@ -31,4 +28,21 @@
   margin: 0;
 
   line-height: 21px;
+}
+
+@media (min-width: $tablet-width) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .features__item {
+    width: 256px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__item {
+    width: 400px;
+  }
 }
