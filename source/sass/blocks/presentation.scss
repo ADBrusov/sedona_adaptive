@@ -1,15 +1,15 @@
 .presentation {
   padding-top: 39px;
   padding-bottom: 49px;
+
+  text-align: center;
+  background-color: #ffffff;
 }
 
 .presentation__info {
-  width: 237px;
-  margin-right: auto;
   margin-bottom: 40px;
-  margin-left: auto;
-
-  text-align: center;
+  padding-right: 42px;
+  padding-left: 42px;
 }
 
 .presentation__title {
@@ -30,7 +30,7 @@
 }
 
 .presentation__content {
-  width: 320px;
+  width: auto;
   margin-right: auto;
   margin-left: auto;
 
@@ -56,4 +56,42 @@
   margin-left: auto;
 
   background-color: #f2f2f2;
+}
+
+@media (min-width: $tablet-width) {
+  .presentation {
+    padding-top: 68px;
+    padding-bottom: 41px;
+  }
+
+  .presentation__info {
+    margin-bottom: 78px;
+    padding-right: 176px;
+    padding-left: 176px;
+  }
+
+  .presentation__content {
+    width: 648px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .presentation {
+    padding-top: 72px;
+    padding-bottom: 85px;
+  }
+
+  .presentation__info {
+    margin-bottom: 76px;
+    padding-right: 392px;
+    padding-left: 392px;
+  }
+
+  .presentation__content {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
