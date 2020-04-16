@@ -49,73 +49,73 @@
         <section class="feedback">
           <h2 class="visually-hidden">Форма отзыва</h2>
           <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST">
-            <fieldset class="feedback__section introduction">
+            <fieldset class="feedback__section feedback__section--introduction">
               <legend class="feedback__title">Представьтесь:</legend>
-              <div class="introduction__section">
+              <div class="feedback__subsection">
                 <label for="name">Имя*:</label>
                 <input type="text" name="name" id="name" placeholder="Петр" required>
               </div>
-              <div class="introduction__section">
+              <div class="feedback__subsection">
                 <label for="surname">Фамилия*:</label>
                 <input type="text" name="surname" id="surname" placeholder="Иванов" required>
               </div>
-              <div class="introduction__section">
+              <div class="feedback__subsection">
                 <label for="midname">Отчество:</label>
                 <input type="text" name="midname" id="midname" placeholder="Александрович">
               </div>
             </fieldset>
 
-            <fieldset class="feedback__section contact">
+            <fieldset class="feedback__section feedback__section--contact">
               <legend class="feedback__title">Контактная информация:</legend>
-              <div class="contact__section">
+              <div class="feedback__subsection">
                 <label for="phone">Контактный телефон*:</label>
                 <input type="tel" name="phone-number" id="phone" placeholder="Введите телефон" required>
               </div>
-              <div class="contact__section">
+              <div class="feedback__subsection">
                 <label for="email">Электронная почта*:</label>
                 <input type="email" name="email-adress" id="email" placeholder="Введите e-mail" required>
               </div>
             </fieldset>
 
-            <fieldset class="feedback__section rating">
+            <fieldset class="feedback__section feedback__section--rating">
               <legend class="feedback__title">Ваше общее впечатление:</legend>
-              <div class="rating__section">
+              <div class="feedback__subsection">
                 <input type="radio" id="ratingChoice1" name="rating" value="positive" checked>
                 <label for="ratingChoice1">Скорее положительное</label>
               </div>
-              <div class="rating__section">
+              <div class="feedback__subsection">
                 <input type="radio" id="ratingChoice2" name="rating" value="negative">
                 <label for="ratingChoice2">Скорее отрицательное</label>
               </div>
-              <div class="rating__section">
+              <div class="feedback__subsection">
                 <input type="radio" id="ratingChoice3" name="rating" value="difficulty">
                 <label for="ratingChoice3">Затрудняюсь ответить</label>
               </div>
             </fieldset>
 
-            <fieldset class="feedback__section landmarks">
+            <fieldset class="feedback__section feedback__section--landmarks">
               <legend class="feedback__title">Посещенные достопримечательности:</legend>
-              <div class="landmarks__section">
+              <div class="feedback__subsection">
                 <input type="checkbox" id="bridge" name="landmark" value="Devils Bridge" checked>
                 <label for="bridge">Мост Дьявола</label>
               </div>
-              <div class="landmarks__section">
+              <div class="feedback__subsection">
                 <input type="checkbox" id="rock" name="landmark" value="Bell Rock" checked>
                 <label for="rock">Гора-Колокол</label>
               </div>
-              <div class="landmarks__section">
+              <div class="feedback__subsection">
                 <input type="checkbox" id="park" name="landmark" value="Slide Park" checked>
                 <label for="park">Слайд-парк</label>
               </div>
-              <div class="landmarks__section">
+              <div class="feedback__subsection">
                 <input type="checkbox" id="mountains" name="landmark" value="Red Mountains">
                 <label for="mountains">Красные скалы</label>
               </div>
             </fieldset>
 
-            <fieldset class="feedback__section review">
+            <fieldset class="feedback__section feedback__section--review">
               <legend class="feedback__title">Опишите свои эмоции:</legend>
-              <div class="review__section">
+              <div class="feedback__subsection">
                 <textarea id="description" name="description" placeholder="Опишите подробно все свои восторги " aria-label="Описание своего приключения"></textarea>
               </div>
             </fieldset>
