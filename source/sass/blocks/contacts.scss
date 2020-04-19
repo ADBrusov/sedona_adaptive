@@ -4,9 +4,28 @@
 
 .contacts__hashtag {
   margin-top: 0;
-  margin-bottom: 41px;
+  margin-bottom: 0;
 
   font-weight: bold;
   font-size: 21px;
   color: #000000;
+}
+
+@media (max-width: $mobile-width-only) {
+  .contacts__hashtag {
+    margin-bottom: 39px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    padding-top: 12px;
+    margin-right: 113px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    margin-right: 269px;
+  }
 }

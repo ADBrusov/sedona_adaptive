@@ -1,5 +1,5 @@
 .search {
-  padding-top: 33px;
+  padding-top: 28px;
   padding-bottom: 49px;
 
   background-color: #ffffff;
@@ -8,7 +8,7 @@
 .search__intro {
   width: 261px;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   margin-left: auto;
 
   text-align: center;
@@ -16,7 +16,7 @@
 
 .search__title {
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 19px;
 
   font-weight: bold;
   font-size: 21px;
@@ -37,17 +37,30 @@
   margin-right: auto;
   margin-left: auto;
   padding-top: 17px;
-  padding-bottom: 18px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .search__text br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .search {
-    padding-top: 57px;
+    padding-top: 55px;
     padding-bottom: 58px;
   }
 
   .search__intro {
-    width: 434px;
+    width: 435px;
+    margin-bottom: 42px;
+  }
+
+  .search__title {
+    margin-bottom: 31px;
+
+    font-size: 30px;
   }
 
   .search__button {
@@ -58,5 +71,9 @@
 @media (min-width: $desktop-width) {
   .search {
     padding-bottom: 66px;
+  }
+
+  .search__intro {
+    margin-bottom: 47px;
   }
 }

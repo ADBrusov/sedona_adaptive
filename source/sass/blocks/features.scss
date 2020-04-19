@@ -73,6 +73,10 @@
   .features__item:not(:last-child) {
     margin-bottom: 28px;
   }
+
+  .features__description br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -144,8 +148,8 @@
   }
 
   .features__item:nth-child(2) {
-    padding-right: 93px;
-    padding-left: 93px;
+    padding-right: 92px;
+    padding-left: 92px;
   }
 
   .features__icon--house {
