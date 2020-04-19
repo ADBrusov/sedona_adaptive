@@ -2,7 +2,7 @@
   background-color: #687d8c;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% -230px;
+  background-position: 50% -229px;
   background-size: 768px 389px;
 }
 
@@ -10,17 +10,29 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 52px;
+  padding-top: 51px;
   padding-bottom: 67px;
 }
 
 .add-intro__description {
-  padding-top: 44px;
-  padding-bottom: 33px;
+  position: relative;
+
+  padding-top: 38px;
+  padding-bottom: 27px;
 
   text-align: center;
 
   background-color: #ffffff;
+
+  &::before {
+    content: url("../img/bg-intro-triangle-mobile.svg");
+    position: absolute;
+    top: -26px;
+    left: 0;
+
+    width: 320px;
+    height: 26px;
+  }
 }
 
 .add-intro__description--form {
@@ -32,7 +44,7 @@
   width: 269px;
   margin-top: 0;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 26px;
   margin-left: auto;
 
   font-weight: bold;
@@ -43,7 +55,7 @@
 
 .add-intro__text {
   width: 275px;
-  margin-top: 40px;
+  margin-top: 0;
   margin-right: auto;
   margin-bottom: 0;
   margin-left: auto;
@@ -59,13 +71,25 @@
   }
 
   .add-intro__logo-image {
+    width: 460px;
+    height: auto;
     padding-top: 94px;
     padding-bottom: 116px;
   }
 
   .add-intro__description {
-    padding-top: 76px;
-    padding-bottom: 75px;
+    padding-top: 74px;
+    padding-bottom: 69px;
+
+    &::before {
+      content: url("../img/bg-intro-triangle-tablet.svg");
+      position: absolute;
+      top: -57px;
+      left: 0;
+
+      width: 768px;
+      height: 57px;
+    }
   }
 
   .add-intro__description--form {
@@ -75,12 +99,13 @@
 
   .add-intro__title {
     width: 490px;
+    margin-bottom: 31px;
 
-    font-size: 21px;
+    font-size: 30px;
   }
 
   .add-intro__text {
-    width: 490px;
+    width: 445px;
   }
 }
 
@@ -88,5 +113,26 @@
   .add-intro {
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 1200px 518px;
+    background-position: 51% -217px;
+  }
+
+  .add-intro__logo-image {
+    padding-top: 102px;
+    padding-bottom: 119px;
+  }
+
+  .add-intro__description {
+    padding-top: 111px;
+    padding-bottom: 71px;
+
+    &::before {
+      content: url("../img/bg-intro-triangle-desktop.svg");
+      position: absolute;
+      top: -57px;
+      left: 0;
+
+      width: 1200px;
+      height: 57px;
+    }
   }
 }
