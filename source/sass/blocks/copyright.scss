@@ -1,10 +1,45 @@
 .copyright {
+  position: relative;
+
   text-align: center;
 }
 
 .copyright p {
   margin: 0;
+  padding-right: 38px;
 
   font-size: 14px;
   color: #000000;
+}
+
+.copyright__icon {
+  position: absolute;
+  top: -9px;
+  right: 96px;
+
+  width: 27px;
+  height: 34px;
+
+  fill: #000000;
+}
+
+.copyright__icon:hover {
+  fill: #81b3d2;
+}
+
+.copyright__icon:active {
+  opacity: 0.3;
+
+  fill: #000000;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding-top: 16px;
+  }
+
+  .copyright__icon {
+    top: 7px;
+    right: -1px;
+  }
 }

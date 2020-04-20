@@ -1,5 +1,45 @@
-.nav__toggle {
-  position: absolute;
+.nav {
+  position: relative;
+}
+
+@media (max-width: $mobile-width-only) {
+  .nav--closed .nav__toggle {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    z-index: 2;
+
+    width: 23px;
+    height: 22px;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    background-image: url("../img/icon-menu.svg");
+    background-size: 23px auto;
+  }
+
+  .nav--opened .nav__toggle {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    z-index: 2;
+
+    width: 23px;
+    height: 22px;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    background-image: url("../img/icon-cross.svg");
+    background-size: 23px auto;
+  }
+
+  .nav--nojs .nav__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
