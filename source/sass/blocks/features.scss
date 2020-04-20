@@ -38,10 +38,6 @@
   line-height: 21px;
 }
 
-.features__icon {
-  fill: #81b3d2;
-}
-
 .features__icon--house {
   position: absolute;
   top: -7px;
@@ -49,6 +45,9 @@
 
   width: 37px;
   height: 36px;
+
+  background-image: url("../img/icon-house.svg");
+  background-size: 37px auto;
 }
 
 .features__icon--gift {
@@ -58,6 +57,9 @@
 
   width: 32px;
   height: 38px;
+
+  background-image: url("../img/icon-gift.svg");
+  background-size: 32px auto;
 }
 
 .features__icon--burger {
@@ -66,7 +68,10 @@
   left: 18px;
 
   width: 40px;
-  height: 35px;
+  height: 36px;
+
+  background-image: url("../img/icon-burger.svg");
+  background-size: 40px;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -119,6 +124,8 @@
 
     width: 75px;
     height: 72px;
+
+    background-size: 75px auto;
   }
 
   .features__icon--gift {
@@ -126,7 +133,9 @@
     left: 95px;
 
     width: 64px;
-    height: 75px;
+    height: 76px;
+
+    background-size: 64px auto;
   }
 
   .features__icon--burger {
@@ -134,7 +143,9 @@
     left: 89px;
 
     width: 77px;
-    height: 68px;
+    height: 69px;
+
+    background-size: 77px auto;
   }
 }
 

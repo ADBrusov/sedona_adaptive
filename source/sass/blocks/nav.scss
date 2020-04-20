@@ -6,7 +6,7 @@
   .nav--closed .nav__toggle {
     position: absolute;
     top: 16px;
-    right: 26px;
+    right: 20px;
     z-index: 2;
 
     width: 23px;
@@ -15,12 +15,15 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    background-image: url("../img/icon-menu.svg");
+    background-size: 23px auto;
   }
 
   .nav--opened .nav__toggle {
     position: absolute;
     top: 16px;
-    right: 26px;
+    right: 20px;
     z-index: 2;
 
     width: 23px;
@@ -29,22 +32,9 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-  }
 
-  .nav--closed .nav__icon-menu {
-    fill: #81b3d2;
-  }
-
-  .nav--opened .nav__icon-menu {
-    display: none;
-  }
-
-  .nav--closed .nav__icon-close {
-    display: none;
-  }
-
-  .nav--opened .nav__icon-close {
-    fill: #ffffff;
+    background-image: url("../img/icon-cross.svg");
+    background-size: 23px auto;
   }
 
   .nav--nojs .nav__toggle {
