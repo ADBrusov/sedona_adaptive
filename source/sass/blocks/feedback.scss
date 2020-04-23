@@ -3,6 +3,10 @@
 }
 
 .feedback__form {
+  position: relative;
+
+  width: 320px;
+
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -12,13 +16,27 @@
 }
 
 .feedback__section {
+  position: relative;
+
   margin: 0;
+  margin-bottom: 25px;
   padding: 0;
   padding-right: 20px;
   padding-left: 20px;
 
   border: none;
-  border-top: 1px solid #e5e5e5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    left: 0;
+
+    width: 320px;
+    height: 1px;
+
+    background-color: #cccccc;
+  }
 }
 
 .feedback__title {
@@ -30,18 +48,26 @@
   text-transform: uppercase;
 }
 
-
-.feedback__section--introduction label,
-.feedback__section--contact label {
-  font-weight: normal;
-  font-size: 14px;
-  color: #333333;
-  text-transform: uppercase;
-}
-
 .feedback__section input {
+  padding-top: 19px;
+  padding-right: 22px;
+  padding-bottom: 19px;
+  padding-left: 22px;
+
   font-weight: bold;
   color: #000000;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.feedback__section input:hover {
+  background-color: #e5e5e5;
+}
+
+.feedback__section input:focus {
+  background-color: #ffffff;
+  box-shadow: solid 4px #e5e5e5;
 }
 
 .feedback__section input::placeholder {
@@ -49,13 +75,218 @@
   color: #000000;
 }
 
+.feedback__section--introduction .feedback__title {
+  margin-bottom: 21px;
+}
+
+.feedback__section--introduction .feedback__subsection {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.feedback__section--introduction label {
+  margin-top: 17px;
+  margin-right: 15px;
+
+  font-weight: normal;
+  font-size: 14px;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.feedback__section--introduction input {
+  width: 193px;
+}
+
+input.feedback__name {
+  width: 230px;
+}
+
+.feedback__section--contact {
+  margin-bottom: 35px;
+}
+
+.feedback__section--contact .feedback__title {
+  margin-bottom: 19px;
+}
+
+.feedback__section--contact .feedback__subsection {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.feedback__section--contact label {
+  position: relative;
+
+  margin-bottom: 7px;
+  padding-left: 22px;
+
+  font-weight: normal;
+  font-size: 14px;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.feedback__section--contact label::before {
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: 222px;
+  z-index: 2;
+
+  display: block;
+  width: 58px;
+  height: 58px;
+
+  background-color: #e6e6e6;
+}
+
+.feedback__label--phone::before {
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 21px 20px;
+}
+
+.feedback__label--email::before {
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: 21px 21px;
+}
+
+.feedback__section--contact input {
+  padding-right: 60px;
+}
+
+.feedback__section--rating {
+  margin-bottom: 19px;
+}
+
+.feedback__section--rating .feedback__title {
+  margin-bottom: 37px;
+}
+
+.feedback__section--rating .feedback__subsection {
+  display: flex;
+  margin-bottom: 43px;
+}
+
+.feedback__section--rating label {
+  position: relative;
+
+  margin-left: 79px;
+}
+
+.feedback__section--rating label::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -79px;
+
+  width: 56px;
+  height: 56px;
+
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.radio:hover + label::before {
+  background-color: #e5e5e5;
+}
+
+.radio:active + label::before {
+  background-color: #d5d5d5;
+}
+
+.radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -62px;
+
+  width: 22px;
+  height: 22px;
+
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+.radio:active + label::after {
+  opacity: 0.3;
+}
+
+.feedback__section--landmarks {
+  margin-bottom: 6px;
+}
+
+.feedback__section--landmarks .feedback__title {
+  margin-bottom: 31px;
+}
+
+.feedback__section--landmarks .feedback__subsection {
+  display: flex;
+  margin-bottom: 54px;
+}
+
+.feedback__section--landmarks label {
+  position: relative;
+
+  margin-left: 79px;
+}
+
+.feedback__section--landmarks label::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -79px;
+
+  width: 56px;
+  height: 56px;
+
+  background-color: #f2f2f2;
+  border-radius: 10%;
+}
+
+.checkbox:hover + label::before {
+  background-color: #e5e5e5;
+}
+
+.checkbox:active + label::before {
+  background-color: #d5d5d5;
+}
+
+.checkbox:checked + label::after {
+  content: url("../img/icon-tick.svg");
+  position: absolute;
+  top: 3px;
+  left: -62px;
+
+  width: 24px;
+  height: 16px;
+}
+
+.checkbox:active + label::after {
+  opacity: 0.3;
+}
+
+.feedback__section--review .feedback__title {
+  margin-bottom: 19px;
+}
+
 .feedback__section--review textarea {
   display: block;
+  width: 279px;
+  min-height: 160px;
   margin-right: auto;
   margin-left: auto;
+  padding: 14px 20px;
 
   font-weight: bold;
+  line-height: 26px;
   color: #000000;
+
+  background-color: #f2f2f2;
+  border: none;
 }
 
 .feedback__section--review textarea::placeholder {
@@ -64,18 +295,22 @@
 }
 
 .feedback__submit {
-  margin-top: 51px;
+  margin-top: 49px;
   margin-right: auto;
-  margin-bottom: 47px;
+  margin-bottom: 49px;
   margin-left: auto;
-  padding-top: 21px;
+  padding-top: 17px;
   padding-right: 48px;
-  padding-bottom: 21px;
-  padding-left: 47px;
+  padding-bottom: 17px;
+  padding-left: 48px;
 
   text-transform: uppercase;
 
   border: none;
+}
+
+.feedback__help {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -83,30 +318,159 @@
     display: flex;
     flex-wrap: wrap;
     width: 648px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 
   .feedback__section {
     width: 100%;
     padding: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .feedback__title {
+    font-size: 21px;
   }
 
   .feedback__section--rating {
     order: -1;
     width: 324px;
+    margin-bottom: 34px;
+  }
+
+  .feedback__section--rating .feedback__title {
+    margin-right: 0;
+    margin-bottom: 73px;
+    margin-left: 0;
+
+    text-align: left;
+  }
+
+  .feedback__section--rating .feedback__subsection {
+    margin-bottom: 52px;
+  }
+
+  .feedback__section--rating label {
+    margin-left: 77px;
   }
 
   .feedback__section--introduction {
+    position: relative;
+
     width: 323px;
+    padding-left: 56px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+
+      width: 1px;
+      height: 292px;
+
+      background-color: #dbdbdb;
+    }
+  }
+
+  .feedback__section--introduction .feedback__title {
+    margin-right: 0;
+    margin-bottom: 57px;
+    margin-left: 0;
+
+    text-align: left;
+  }
+
+  .feedback__section--introduction input {
+    width: 178px;
+  }
+
+  input.feedback__name {
+    width: 216px;
+  }
+
+  .feedback__section--contact {
+    margin-bottom: 30px;
+
+    border-top: 1px solid #dbdbdb;
+  }
+
+  .feedback__section--contact .feedback__title {
+    width: 400px;
+    margin-bottom: 24px;
+  }
+
+  .feedback__section--contact .feedback__subsection {
+    margin-bottom: 23px;
+  }
+
+  .feedback__section--contact label::before {
+    left: 590px;
+  }
+
+  .feedback__section--contact input {
+    width: 648px;
+  }
+
+  .feedback__section--landmarks {
+    margin-bottom: 22px;
+
+    border-top: 1px solid #dbdbdb;
+  }
+
+  .feedback__section--landmarks .feedback__title {
+    width: 400px;
+    margin-bottom: 56px;
+  }
+
+  .feedback__landmarks-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 95px;
+  }
+
+  .feedback__section--landmarks .feedback__subsection {
+    width: 235px;
+    margin-right: 25px;
+    margin-bottom: 62px;
+  }
+
+  .feedback__section--review {
+    border-top: 1px solid #dbdbdb;
+  }
+
+  .feedback__section--review .feedback__title {
+    width: 400px;
+    margin-bottom: 57px;
+  }
+
+  .feedback__section--review textarea {
+    width: 648px;
   }
 
   .feedback__submit {
-    margin-top: 58px;
+    margin-top: 33px;
+    margin-bottom: 63px;
     margin-left: 0;
-    margin-bottom: 61px;
-    padding-right: 75px;
+    padding-right: 77px;
     padding-left: 64px;
+  }
+
+  .feedback__help {
+    position: absolute;
+    right: 0;
+    bottom: 77px;
+
+    display: inline;
+
+    font-weight: normal;
+    font-size: 14px;
+    text-align: right;
+    color: #333333;
+    text-transform: uppercase;
   }
 }
 
@@ -117,15 +481,93 @@
 
   .feedback__section--rating {
     width: 480px;
+    margin-bottom: 32px;
+    padding-left: 80px;
   }
 
-  .feedback__section--introducton {
+  .feedback__section--rating label {
+    margin: 0;
+  }
+
+  .feedback__section--introduction {
     width: 480px;
+    padding-left: 80px;
+  }
+
+  .feedback__section--introduction input {
+    width: 311px;
+  }
+
+  input.feedback__name {
+    width: 348px;
+  }
+
+  .feedback__section--contact {
+    margin-bottom: 53px;
+  }
+
+  .feedback__section--contact .feedback__title {
+    margin-bottom: 74px;
+  }
+
+  .feedback__contact-wrap {
+    display: flex;
+  }
+
+  .feedback__section--contact .feedback__subsection {
+    width: 480px;
+    margin: 0;
+  }
+
+  .feedback__section--contact input {
+    width: 316px;
+  }
+
+  .feedback__section--contact label {
+    margin-top: 17px;
+    margin-right: 17px;
+    padding-left: 0;
+  }
+
+  .feedback__section--contact .feedback__label--phone::before {
+    top: -17px;
+    left: 344px;
+  }
+
+  .feedback__section--contact .feedback__label--email::before {
+    top: -17px;
+    left: 422px;
+  }
+
+  .feedback__section--contact .feedback__prefix {
+    display: none;
+  }
+
+  .feedback__section--landmarks {
+    margin-bottom: 20px;
+  }
+
+  .feedback__landmarks-wrap {
+    justify-content: space-between;
+    padding-left: 0;
+  }
+
+  .feedback__section--landmarks .feedback__subsection {
+    width: auto;
+    margin-right: 3px;
+  }
+
+  .feedback__section--review textarea {
+    width: 960px;
   }
 
   .feedback__submit {
-    margin-bottom: 66px;
+    margin-bottom: 68px;
     padding-right: 147px;
     padding-left: 148px;
+  }
+
+  .feedback__help {
+    bottom: 82px;
   }
 }
