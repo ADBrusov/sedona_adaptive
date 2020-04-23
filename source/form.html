@@ -6,6 +6,34 @@
     <title>Седона. Форма отзыва</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+        <!-- Pixel Glass -->
+<style>
+  html {
+    /* Mobile layout by default */
+    background-image: url("img/sedona-form-mobile.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+  }
+  /* Tablet */
+  @media (min-width: 768px) {
+    html {
+      /* Tablet layout */
+      background-image: url("img/sedona-form-tablet.png");
+    }
+  }
+  /* Desktop */
+  @media (min-width: 1200px) {
+    html {
+      /* Desktop layout */
+      background-image: url("img/sedona-form-desktop.png");
+    }
+  }
+</style>
+<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
+
   </head>
 
   <body>
@@ -41,10 +69,10 @@
               <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
-          <button class="nav__toggle" type="button"></button>
+          <button class="nav__toggle" type="button" aria-label="Открыть/Закрыть меню"></button>
         </nav>
         <div class="page-header__logo-wrap">
-          <a class="page-header__logo">
+          <a class="page-header__logo" href="index.html">
             <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona">
           </a>
         </div>
@@ -69,7 +97,7 @@
               <legend class="feedback__title">Представьтесь:</legend>
               <div class="feedback__subsection">
                 <label for="name">Имя*:</label>
-                <input type="text" name="name" id="name" placeholder="Петр" required>
+                <input class="feedback__name" type="text" name="name" id="name" placeholder="Петр" required>
               </div>
               <div class="feedback__subsection">
                 <label for="surname">Фамилия*:</label>
@@ -83,49 +111,56 @@
 
             <fieldset class="feedback__section feedback__section--contact">
               <legend class="feedback__title">Контактная информация:</legend>
+              <div class="feedback__contact-wrap">
               <div class="feedback__subsection">
-                <label for="phone">Контактный телефон*:</label>
+                <label class="feedback__label--phone" for="phone">
+                  <span class="feedback__prefix">Контактный</span>
+                  телефон*:
+                </label>
                 <input type="tel" name="phone-number" id="phone" placeholder="Введите телефон" required>
               </div>
               <div class="feedback__subsection">
-                <label for="email">Электронная почта*:</label>
+                <label class="feedback__label--email" for="email">Электронная почта*:</label>
                 <input type="email" name="email-adress" id="email" placeholder="Введите e-mail" required>
+              </div>
               </div>
             </fieldset>
 
             <fieldset class="feedback__section feedback__section--rating">
               <legend class="feedback__title">Ваше общее впечатление:</legend>
               <div class="feedback__subsection">
-                <input type="radio" id="ratingChoice1" name="rating" value="positive" checked>
+                <input class="visually-hidden radio" type="radio" id="ratingChoice1" name="rating" value="positive" checked>
                 <label for="ratingChoice1">Скорее положительное</label>
               </div>
               <div class="feedback__subsection">
-                <input type="radio" id="ratingChoice2" name="rating" value="negative">
+                <input class="visually-hidden radio" type="radio" id="ratingChoice2" name="rating" value="negative">
                 <label for="ratingChoice2">Скорее отрицательное</label>
               </div>
               <div class="feedback__subsection">
-                <input type="radio" id="ratingChoice3" name="rating" value="difficulty">
+                <input class="visually-hidden radio" type="radio" id="ratingChoice3" name="rating" value="difficulty">
                 <label for="ratingChoice3">Затрудняюсь ответить</label>
               </div>
             </fieldset>
 
             <fieldset class="feedback__section feedback__section--landmarks">
               <legend class="feedback__title">Посещенные достопримечательности:</legend>
-              <div class="feedback__subsection">
-                <input type="checkbox" id="bridge" name="landmark" value="Devils Bridge" checked>
-                <label for="bridge">Мост Дьявола</label>
-              </div>
-              <div class="feedback__subsection">
-                <input type="checkbox" id="rock" name="landmark" value="Bell Rock" checked>
-                <label for="rock">Гора-Колокол</label>
-              </div>
-              <div class="feedback__subsection">
-                <input type="checkbox" id="park" name="landmark" value="Slide Park" checked>
-                <label for="park">Слайд-парк</label>
-              </div>
-              <div class="feedback__subsection">
-                <input type="checkbox" id="mountains" name="landmark" value="Red Mountains">
-                <label for="mountains">Красные скалы</label>
+              <div class="feedback__landmarks-wrap">
+                <div class="feedback__subsection">
+                  <input class="visually-hidden checkbox" type="checkbox" id="bridge" name="landmark" value="Devils Bridge" checked>
+                  <label for="bridge">Мост Дьявола</label>
+                </div>
+                <div class="feedback__subsection">
+                  <input class="visually-hidden checkbox" type="checkbox" id="rock" name="landmark" value="Bell Rock" checked>
+                  <label for="rock">Гора-Колокол</label>
+                </div>
+                <div class="feedback__subsection">
+                  <input class="visually-hidden checkbox" type="checkbox" id="park" name="landmark" value="Slide Park" checked>
+                  <label for="park">Слайд-парк</label>
+                </div>
+                <div class="feedback__subsection">
+                  <input class="visually-hidden checkbox" type="checkbox" id="mountains" name="landmark" value="Red Mountains">
+                  <label for="mountains">Красные скалы</label>
+                </div>
               </div>
             </fieldset>
 
@@ -137,6 +172,7 @@
             </fieldset>
 
             <button class="feedback__submit button" type="submit">Отправить отзыв</button>
+            <span class="feedback__help">* — обязательные поля</span>
           </form>
         </section>
       </main>
