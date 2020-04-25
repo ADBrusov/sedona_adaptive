@@ -91,6 +91,7 @@
 
 .advantage__picture {
   display: block;
+  max-width: 100%;
 }
 
 @media (min-width: $tablet-width) {
@@ -139,12 +140,20 @@
     }
   }
 
-  .advantage__picture {
+  .advantage__picture-wrap {
+    position: relative;
+
     width: 512px;
     height: 256px;
+    overflow: hidden;
   }
 
-  .advantage:nth-child(2) .advantage__picture {
+  .advantage__picture {
+    width: auto;
+    height: auto;
+  }
+
+  .advantage:nth-child(2) .advantage__picture-wrap {
     order: -1;
   }
 }
@@ -180,8 +189,8 @@
   }
 
   .advantage:first-child .advantage__title {
-    padding-left: 25px;
     padding-right: 25px;
+    padding-left: 25px;
   }
 
   .advantage:nth-child(2) .advantage__title {
@@ -190,11 +199,16 @@
   }
 
   .advantage:nth-child(n+3) .advantage__title {
-    padding-left: 71px;
     padding-right: 71px;
+    padding-left: 71px;
+  }
+
+  .advantage__picture-wrap {
+    width: 800px;
   }
 
   .advantage__picture {
-    width: 800px;
+    position: absolute;
+    top: -72px;
   }
 }
