@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: 768px 389px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 }
 
 .intro__logo-image {
@@ -77,6 +81,10 @@
   .intro {
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: 768px 518px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   .intro__logo-image {
@@ -117,6 +125,10 @@
   .intro {
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 1200px 518px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   .intro__description {
