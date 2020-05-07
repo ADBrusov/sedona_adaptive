@@ -13,6 +13,8 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
 var del = require("del");
 var server = require("browser-sync").create();
 
@@ -61,7 +63,15 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin())
     .pipe(gulp.dest("build"));
+});
+
+gulp.task("js", function () {
+  return gulp.src("source/js/nav-mobile.js")
+  .pipe(uglify())
+  .pipe(rename("nav-mobile.min.js"))
+  .pipe(gulp.dest("source/js"));
 });
 
 gulp.task("copy", function () {
