@@ -8,6 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 320px;
+  margin-bottom: 29px;
   padding: 0 20px;
 
   font-weight: bold;
@@ -20,7 +21,7 @@
 
 .feedback__section {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   padding: 0;
 
   border: none;
@@ -49,9 +50,9 @@
 }
 
 .feedback__section input {
-  padding-top: 19px;
+  padding-top: 18px;
   padding-right: 22px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   padding-left: 22px;
 
   font-weight: bold;
@@ -85,7 +86,7 @@
 .feedback__section--introduction .feedback__subsection {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .feedback__section--introduction label {
@@ -109,7 +110,7 @@
 }
 
 .feedback__section--contact .feedback__title {
-  margin-bottom: 19px;
+  margin-bottom: 21px;
 }
 
 .feedback__section--contact .feedback__subsection {
@@ -158,11 +159,13 @@
 
 .feedback__section--contact input {
   width: 280px;
+  padding-top: 16px;
   padding-right: 59px;
-  padding-bottom: 13px;
+  padding-bottom: 16px;
 }
 
 .feedback__section--rating {
+  width: 100%;
   margin-bottom: 19px;
 }
 
@@ -299,9 +302,9 @@
 }
 
 .feedback__submit {
-  margin-top: 49px;
+  margin-top: 21px;
   margin-right: auto;
-  margin-bottom: 49px;
+  margin-bottom: 21px;
   margin-left: auto;
   padding-top: 17px;
   padding-right: 48px;
@@ -321,6 +324,7 @@
   .feedback__form {
     width: 648px;
     margin-right: auto;
+    margin-bottom: 0;
     margin-left: auto;
     padding: 0;
   }
