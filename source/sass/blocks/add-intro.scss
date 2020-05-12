@@ -10,8 +10,14 @@
   }
 }
 
+.add-intro__logo-wrap {
+  width: 229px;
+  margin: auto;
+}
+
 .add-intro__logo-image {
   display: block;
+  width: auto;
   margin-right: auto;
   margin-left: auto;
   padding-top: 51px;
@@ -78,8 +84,11 @@
     }
   }
 
-  .add-intro__logo-image {
+  .add-intro__logo-wrap {
     width: 460px;
+  }
+
+  .add-intro__logo-image {
     height: auto;
     padding-top: 94px;
     padding-bottom: 116px;
@@ -113,15 +122,15 @@
   }
 
   .add-intro__text {
-    width: 445px;
+    width: 444px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .add-intro {
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-size: 1200px 518px;
     background-position: 51% -217px;
+    background-size: 1200px 518px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
@@ -135,7 +144,7 @@
 
   .add-intro__description {
     padding-top: 111px;
-    padding-bottom: 59px;
+    padding-bottom: 72px;
 
     &::before {
       content: url("../img/bg-intro-triangle-desktop.svg");
@@ -146,5 +155,9 @@
       width: 1200px;
       height: 57px;
     }
+  }
+
+  .add-intro__description--form {
+    padding-bottom: 59px;
   }
 }

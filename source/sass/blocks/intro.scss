@@ -10,8 +10,14 @@
   }
 }
 
+.intro__logo-wrap {
+  width: 281px;
+  margin: auto;
+}
+
 .intro__logo-image {
   display: block;
+  width: auto;
   margin-right: auto;
   margin-left: auto;
   padding-top: 90px;
@@ -87,8 +93,11 @@
     }
   }
 
-  .intro__logo-image {
+  .intro__logo-wrap {
     width: 460px;
+  }
+
+  .intro__logo-image {
     height: auto;
     padding-top: 77px;
     padding-bottom: 91px;

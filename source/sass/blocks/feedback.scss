@@ -5,7 +5,11 @@
 .feedback__form {
   position: relative;
 
+  display: flex;
+  flex-wrap: wrap;
   width: 320px;
+  margin-bottom: 29px;
+  padding: 0 20px;
 
   font-weight: bold;
   font-size: 18px;
@@ -16,21 +20,27 @@
 }
 
 .feedback__section {
-  position: relative;
-
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   padding: 0;
-  padding-right: 20px;
-  padding-left: 20px;
 
   border: none;
+}
+
+.feedback__title {
+  position: relative;
+
+  display: block;
+  width: 100%;
+
+  text-align: center;
+  text-transform: uppercase;
 
   &::before {
     content: "";
     position: absolute;
     top: -19px;
-    left: 0;
+    left: -20px;
 
     width: 320px;
     height: 1px;
@@ -39,22 +49,16 @@
   }
 }
 
-.feedback__title {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .feedback__section input {
-  padding-top: 19px;
+  padding-top: 18px;
   padding-right: 22px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   padding-left: 22px;
 
   font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
   color: #000000;
 
   background-color: #f2f2f2;
@@ -67,7 +71,7 @@
 
 .feedback__section input:focus {
   background-color: #ffffff;
-  box-shadow: solid 4px #e5e5e5;
+  outline: #e5e5e5 solid 4px;
 }
 
 .feedback__section input::placeholder {
@@ -81,7 +85,8 @@
 
 .feedback__section--introduction .feedback__subsection {
   display: flex;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
 }
 
 .feedback__section--introduction label {
@@ -95,19 +100,17 @@
 }
 
 .feedback__section--introduction input {
-  width: 193px;
-}
-
-input.feedback__name {
-  width: 230px;
+  flex-grow: 1;
+  width: 190px;
 }
 
 .feedback__section--contact {
+  width: 280px;
   margin-bottom: 35px;
 }
 
 .feedback__section--contact .feedback__title {
-  margin-bottom: 19px;
+  margin-bottom: 21px;
 }
 
 .feedback__section--contact .feedback__subsection {
@@ -155,10 +158,14 @@ input.feedback__name {
 }
 
 .feedback__section--contact input {
-  padding-right: 60px;
+  width: 280px;
+  padding-top: 16px;
+  padding-right: 59px;
+  padding-bottom: 16px;
 }
 
 .feedback__section--rating {
+  width: 100%;
   margin-bottom: 19px;
 }
 
@@ -295,9 +302,9 @@ input.feedback__name {
 }
 
 .feedback__submit {
-  margin-top: 49px;
+  margin-top: 21px;
   margin-right: auto;
-  margin-bottom: 49px;
+  margin-bottom: 21px;
   margin-left: auto;
   padding-top: 17px;
   padding-right: 48px;
@@ -315,24 +322,24 @@ input.feedback__name {
 
 @media (min-width: $tablet-width) {
   .feedback__form {
-    display: flex;
-    flex-wrap: wrap;
     width: 648px;
     margin-right: auto;
+    margin-bottom: 0;
     margin-left: auto;
+    padding: 0;
   }
 
   .feedback__section {
     width: 100%;
     padding: 0;
-
-    &::before {
-      content: none;
-    }
   }
 
   .feedback__title {
     font-size: 21px;
+
+    &::before {
+      content: none;
+    }
   }
 
   .feedback__section--rating {
@@ -362,18 +369,6 @@ input.feedback__name {
 
     width: 323px;
     padding-left: 56px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 5px;
-      left: 0;
-
-      width: 1px;
-      height: 292px;
-
-      background-color: #dbdbdb;
-    }
   }
 
   .feedback__section--introduction .feedback__title {
@@ -382,15 +377,25 @@ input.feedback__name {
     margin-left: 0;
 
     text-align: left;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -56px;
+
+      width: 1px;
+      height: 292px;
+
+      background-color: #dbdbdb;
+    }
   }
 
   .feedback__section--introduction input {
-    width: 178px;
+    flex-grow: 1;
+    width: 175px;
   }
 
-  input.feedback__name {
-    width: 216px;
-  }
 
   .feedback__section--contact {
     margin-bottom: 30px;
@@ -400,7 +405,9 @@ input.feedback__name {
 
   .feedback__section--contact .feedback__title {
     width: 400px;
+    margin-right: auto;
     margin-bottom: 24px;
+    margin-left: auto;
   }
 
   .feedback__section--contact .feedback__subsection {
@@ -423,7 +430,9 @@ input.feedback__name {
 
   .feedback__section--landmarks .feedback__title {
     width: 400px;
+    margin-right: auto;
     margin-bottom: 56px;
+    margin-left: auto;
   }
 
   .feedback__landmarks-wrap {
@@ -444,7 +453,9 @@ input.feedback__name {
 
   .feedback__section--review .feedback__title {
     width: 400px;
+    margin-right: auto;
     margin-bottom: 57px;
+    margin-left: auto;
   }
 
   .feedback__section--review textarea {
@@ -494,12 +505,15 @@ input.feedback__name {
     padding-left: 80px;
   }
 
-  .feedback__section--introduction input {
-    width: 311px;
+  .feedback__section--introduction .feedback__title {
+    &::before {
+      left: -79px;
+    }
   }
 
-  input.feedback__name {
-    width: 348px;
+  .feedback__section--introduction input {
+    flex-grow: 1;
+    width: 310px;
   }
 
   .feedback__section--contact {
@@ -520,7 +534,7 @@ input.feedback__name {
   }
 
   .feedback__section--contact input {
-    width: 316px;
+    width: 315px;
   }
 
   .feedback__section--contact label {
