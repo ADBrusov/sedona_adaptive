@@ -205,6 +205,10 @@
   background-color: #d5d5d5;
 }
 
+.radio:focus + label::before {
+  outline: 3px solid lightblue;
+}
+
 .radio:checked + label::after {
   content: "";
   position: absolute;
@@ -260,6 +264,10 @@
 
 .checkbox:active + label::before {
   background-color: #d5d5d5;
+}
+
+.checkbox:focus + label::before {
+  outline: 3px solid lightblue;
 }
 
 .checkbox:checked + label::after {
@@ -526,11 +534,16 @@
 
   .feedback__contact-wrap {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .feedback__section--contact .feedback__subsection {
     width: 480px;
     margin: 0;
+  }
+
+  .feedback__section--contact .feedback__subsection:nth-child(n+3) {
+    margin-top: 45px;
   }
 
   .feedback__section--contact input {

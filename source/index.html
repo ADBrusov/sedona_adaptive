@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона</title>
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.js" async></script>
   </head>
@@ -83,20 +84,17 @@
                 <h2 class="visually-hidden">Особенности городка Седоны</h2>
                 <div class="advantage__features features">
                   <ul class="features__list">
-                    <li class="features__item">
+                    <li class="features__item features__item--house">
                       <h3 class="features__title">Жилье</h3>
                       <p class="features__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-                      <div class="features__icon features__icon--house"></div>
                     </li>
-                    <li class="features__item">
+                    <li class="features__item features__item--gift">
                       <h3 class="features__title">Сувениры</h3>
                       <p class="features__description">Не только китайского,<br> но и местного производства!</p>
-                      <div class="features__icon features__icon--gift"></div>
                     </li>
-                    <li class="features__item">
+                    <li class="features__item features__item--burger">
                       <h3 class="features__title">Еда</h3>
                       <p class="features__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-                      <div class="features__icon features__icon--burger"></div>
                     </li>
                   </ul>
                 </div>
@@ -159,8 +157,15 @@
         <section class="map">
           <h2 class="visually-hidden">Карта Седоны</h2>
           <div class="map__wrap">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.6000718966407!2d-111.76385102457148!3d34.866275011468645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDUyJzAyLjciTiAxMTHCsDQ1JzQ1LjciVw!5e0!3m2!1sru!2sru!4v1583444553484!5m2!1sru!2sru" width="320" height="350" style="border: 0;" allowfullscreen></iframe>
-          </div>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+              <img class="map__picture" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="350" alt="Седона, Аризона 86336, США">
+            </picture>
+            <iframe class="map__google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.6000718966407!2d-111.76385102457148!3d34.866275011468645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDUyJzAyLjciTiAxMTHCsDQ1JzQ1LjciVw!5e0!3m2!1sru!2sru!4v1583444553484!5m2!1sru!2sru" width="320" height="350" style="border: 0;" allowfullscreen></iframe>
         </section>
       </main>
 
